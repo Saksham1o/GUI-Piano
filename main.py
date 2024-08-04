@@ -106,3 +106,90 @@ def value_D1():
     sound = pygame.mixer.Sound("D1.mp3")
     sound.play()
 
+def value_Cs1():
+    str.set("C#1")
+    sound = pygame.mixer.Sound("C#1.mp3")
+    sound.play()
+
+def value_Ds1():
+    str.set("C#1")
+    sound = pygame.mixer.Sound("D#1.mp3")
+    sound.play()
+
+# Label
+Label(abc1, text="Piano Musical Keys", font=("arial", 25, "bold"), padx=8, pady=8, bd=4, width=59, bg="powder blue",
+      fg="white", height=1,
+      justify=CENTER).grid(row=0, column=0, columnspan=11)
+
+display = Entry(abc1, textvariable=str, font=("arial", 18, "bold"), width=35, bd=34, bg="powder blue", fg="black",
+                justify=CENTER).grid(row=1, column=5, pady=1)
+
+# Buttons for keynotes
+btnCs = Button(abc2, height=6, width=4, bd=4, text="C#", font=("arial", 18, "bold"), bg="black", fg="white",
+               command=value_Cs)
+btnCs.grid(row=0, column=0, padx=5, pady=5)
+btnDs = Button(abc2, height=6, width=4, bd=4, text="D#", font=("arial", 18, "bold"), bg="black", fg="white",
+               command=value_Ds)
+btnDs.grid(row=0, column=1, padx=5, pady=5)
+
+btnSpace1 = Button(abc2, state=DISABLED, height=6, width=2, bg="powder blue", relief=FLAT)
+btnSpace1.grid(row=0, column=3, padx=0, pady=0)
+
+btnFs = Button(abc2, height=6, width=4, bd=4, text="F#", font=("arial", 18, "bold"), bg="black", fg="white",
+               command=value_Fs)
+btnFs.grid(row=0, column=4, padx=5, pady=5)
+btnGs = Button(abc2, height=6, width=4, bd=4, text="G#", font=("arial", 18, "bold"), bg="black", fg="white",
+               command=value_Gs)
+btnGs.grid(row=0, column=6, padx=5, pady=5)
+btnBb = Button(abc2, height=6, width=4, bd=4, text="Bb", font=("arial", 18, "bold"), bg="black", fg="white",
+               command=value_Bb)
+btnBb.grid(row=0, column=8, padx=5, pady=5)
+
+btnSpace5 = Button(abc2, state=DISABLED, height=6, width=2, bg="powder blue", relief=FLAT)
+btnSpace5.grid(row=0, column=9, padx=0, pady=0)
+
+btnCs1 = Button(abc2, height=6, width=4, bd=4, text="C#1", font=("arial", 18, "bold"), bg="black", fg="white",
+                command=value_Cs1)
+btnCs1.grid(row=0, column=10, padx=5, pady=5)
+btnDs1 = Button(abc2, height=6, width=4, bd=4, text="D#1", font=("arial", 18, "bold"), bg="black", fg="white",
+                command=value_Ds1)
+btnDs1.grid(row=0, column=12, padx=5, pady=5)
+
+btnC = Button(abc3, bd=4, width=4, height=6, text="C", bg="white", fg="black", font=("arial", 18, "bold"),
+              command=value_C)
+btnC.grid(row=0, column=0, padx=5, pady=5)
+btnD = Button(abc3, bd=4, width=4, height=6, text="D", bg="white", fg="black", font=("arial", 18, "bold"),
+              command=value_D)
+btnD.grid(row=0, column=1, padx=5, pady=5)
+btnE = Button(abc3, bd=4, width=4, height=6, text="E", bg="white", fg="black", font=("arial", 18, "bold"),
+              command=value_E)
+btnE.grid(row=0, column=2, padx=5, pady=5)
+btnF = Button(abc3, bd=4, width=4, height=6, text="F", bg="white", fg="black", font=("arial", 18, "bold"),
+              command=value_F)
+btnF.grid(row=0, column=3, padx=5, pady=5)
+
+btnG = Button(abc3, bd=4, width=4, height=6, text="G", bg="white", fg="black", font=("arial", 18, "bold"),
+              command=value_G)
+btnG.grid(row=0, column=4, padx=5, pady=5)
+btnA = Button(abc3, bd=4, width=4, height=6, text="A", bg="white", fg="black", font=("arial", 18, "bold"),
+              command=value_A)
+btnA.grid(row=0, column=5, padx=5, pady=5)
+btnB = Button(abc3, bd=4, width=4, height=6, text="B", bg="white", fg="black", font=("arial", 18, "bold"),
+              command=value_B)
+btnB.grid(row=0, column=6, padx=5, pady=5)
+btnC1 = Button(abc3, bd=4, width=4, height=6, text="C1", bg="white", fg="black", font=("arial", 18, "bold"),
+               command=value_C1)
+btnC1.grid(row=0, column=7, padx=5, pady=5)
+
+btnD1 = Button(abc3, bd=4, width=4, height=6, text="D1", bg="white", fg="black", font=("arial", 18, "bold"),
+               command=value_D1)
+btnD1.grid(row=0, column=8, padx=5, pady=5)
+btnE1 = Button(abc3, bd=4, width=4, height=6, text="E1", bg="white", fg="black", font=("arial", 18, "bold"),
+               command=value_E1)
+btnE1.grid(row=0, column=9, padx=5, pady=5)
+btnF1 = Button(abc3, bd=4, width=4, height=6, text="F1", bg="white", fg="black", font=("arial", 18, "bold"),
+               command=value_F1)
+btnF1.grid(row=0, column=10, padx=5, pady=5)
+
+# Mainloop
+root.mainloop()
